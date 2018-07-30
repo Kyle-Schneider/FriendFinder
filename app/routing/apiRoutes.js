@@ -1,5 +1,5 @@
 
-var userData = require("./data/userData");
+var friendsData = require("../data/friendsData");
 
 
 
