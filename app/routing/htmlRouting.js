@@ -1,5 +1,7 @@
 var path = require("path");
 
+//require ("./routing/apiRoutes.js");
+
 module.exports = function(app) {
   // HTML GET Requests
   // Below code handles when users "visit" a page.
@@ -15,3 +17,5 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/home.html"));
   });
 }
+
+

@@ -1,6 +1,7 @@
+var path = require("path");
 var express = require("express");
 var bodyParser = require("body-parser");
-var path = require("path");
+
 
 var app = express();
 
@@ -11,14 +12,9 @@ var PORT = process.env.PORT || 8080;
 app.use(express.static("public"))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-require("../routing/apiRoutes.js")(app);
-require("../routing/htmlRouting.js")(app);
-//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^6
-// ================================================================================
-// ROUTER
-// The below points our server to a series of "route" files.
-// These routes give our server a "map" of how to respond when users visit or request data from various URLs.
-// ================================================================================
+require("./app/routing/apiRoutes.js")(app);
+require("./app/routing/htmlRouting.js")(app);
+
 
 // =============================================================================
 // LISTENER

@@ -1,14 +1,15 @@
 
-var userData = require("../data/userData");
+var userData = require("./data/userData");
 
 
-//A GET route with the url `/api/friends`. 
-//This will be used to display
-//  JSON of all possible friends
+
 module.exports = function(app) {
      
-      app.get("/api/friends/", function(req, res) {
+      app.get("/api/friends", function(req, res) {
             res.json(userData);
+
+                        //This will be used to display
+                               //  JSON of all possible friends
       });
 
       // API POST Requests
@@ -20,8 +21,12 @@ module.exports = function(app) {
       // ---------------------------------------------------------------------------
     
       app.post("/api/friends/", function(req, res) {
-        // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
-        // It will do this by sending out the value "true" have a table
+            // here^^^^
+            //survey results
+            // compatibility logic 
+
+
+     
         // req.body is available since we're using the body-parser middleware
       //   if (tableData.length < 5) {
       //     tableData.push(req.body);
@@ -32,7 +37,7 @@ module.exports = function(app) {
       //     res.json(false);
         
       });
-      
+
       }
 
  
