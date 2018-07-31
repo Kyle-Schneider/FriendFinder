@@ -21,6 +21,7 @@ module.exports = function(app) {
       // ---------------------------------------------------------------------------
     
       app.post("/api/friends/", function(req, res) {
+            
             // here^^^^
             //survey results
             // compatibility logic 
@@ -28,8 +29,8 @@ module.exports = function(app) {
 
      
         // req.body is available since we're using the body-parser middleware
-      //   if (tableData.length < 5) {
-      //     tableData.push(req.body);
+         
+        friendsData.push(req.body);
       //     res.json(true);
       //   }
       //   else {
