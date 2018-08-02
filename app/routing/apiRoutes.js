@@ -23,22 +23,24 @@ module.exports = function(app) {
       app.post("/api/friends/", function(req, res) {
             
             // here^^^^
+            var bestMatch = {
+                  name: "",
+                  photo: "",
+                  friendDifference: Infinity
+                };
+            
+                var userData = req.body;
+                var userScores = userData.scores;
+            
+
             //survey results
             // compatibility logic 
-
-
-     
         // req.body is available since we're using the body-parser middleware
-         
-        friendsData.push(req.body);
-      //     res.json(true);
-      //   }
-      //   else {
-      //     waitListData.push(req.body);
-      //     res.json(false);
-        
+        //friendsData.push(req.body);
+   
       });
 
-      }
+
+}
 
  
