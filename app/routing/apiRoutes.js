@@ -32,8 +32,16 @@ module.exports = function(app) {
                 var userData = req.body;
                 var userScores = userData.scores;
             
+           
+            var totalDifference;
 
-            //survey results
+    // Here we loop through all the friend possibilities in the database.
+    for (var i = 0; i < friendsData.length; i++) {
+      var currentFriend = friendsData[i];
+      totalDifference = 0;
+
+      console.log(currentFriend.name);
+    };
             // compatibility logic 
         // req.body is available since we're using the body-parser middleware
         //friendsData.push(req.body);
